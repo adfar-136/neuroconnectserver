@@ -38,7 +38,8 @@ const allowedOrigins = [
   'http://localhost:5177',
   'http://localhost:5178',
   'http://localhost:5179',
-  'http://localhost:5180'
+  'http://localhost:5180',
+  'https://iustneuro.netlify.app'
 ];
 
 const io = new Server(server, {
