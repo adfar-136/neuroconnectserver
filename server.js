@@ -113,7 +113,7 @@ app.locals.broadcastMessage = broadcastMessage;
 // MongoDB connection
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/neuroo");
+    await mongoose.connect("mongodb+srv://midreesbhat_db:test@cluster0.c0lvlbi.mongodb.net/neuro");
     console.log('MongoDB connected successfully');
     
     // Start background job for session expiration
