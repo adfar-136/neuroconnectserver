@@ -4,7 +4,7 @@ import cors from 'cors';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import dotenv from 'dotenv';
-import rateLimit from 'express-rate-limit';
+// Rate limiting removed
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -48,14 +48,8 @@ const io = new Server(server, {
   }
 });
 
-// Rate limiting
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100 // limit each IP to 100 requests per windowMs
-});
-
+// Rate limiting removed - no more 429 errors
 // Middleware
-app.use(limiter);
 app.use(cors({
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
